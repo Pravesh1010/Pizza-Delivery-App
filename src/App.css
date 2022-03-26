@@ -1,38 +1,32 @@
 .App {
   text-align: center;
 }
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Lilita One', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link{
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-brand{
+  color: black;
+}
+.flex-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.price{
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.name{
+  font-size: 30px;
+}
+
+.nav-container{
+  background-color: rgb(114, 114, 94);
 }
