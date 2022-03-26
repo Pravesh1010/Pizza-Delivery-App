@@ -10,7 +10,7 @@ const pizzas = [
         large: 400,
       },
     ],
-
+  
     category: "nonveg",
     image:
       "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.jpg",
