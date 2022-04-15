@@ -1,12 +1,12 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-export default function NavBar() {
+export default function NavBar({ cartItems }) {
   const history = useHistory();
   return (
     <div className="nav-container">
       <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" onClick={() => history.push("/")}>
           World of Pizza
         </a>
         <button
@@ -23,14 +23,14 @@ export default function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <button className="btn btn-dark" onClick={() => history.push('/login')}>
                 Login 
-              </a>
+              </button>
             </li>
             <li className="nav-item">
-              <a className="nav-link"  onClick={() => history.push("/cart")}>
-                Cart
-              </a>
+              <button className="btn btn-dark" onClick={() => history.push('/cart')}>
+                Cart {cartItems.length}
+              </button>
             </li>
           </ul>
         </div>
@@ -38,5 +38,6 @@ export default function NavBar() {
     </div>
   );
 }
+
 
 

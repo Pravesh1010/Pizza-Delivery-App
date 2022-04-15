@@ -1,0 +1,313 @@
+[
+  {
+    "id": 1,
+    "name": "Pepper Barbecue Chicken",
+    "varients": ["small", "medium", "large"],
+    "base": [
+      "Whole Wheat",
+      "Refined Wheat",
+      "Italian Bread",
+      "Thin Crust",
+      "Cheese Crust"
+    ],
+    "cheese": [
+      "None",
+      "Mozzarella",
+      "Cheddar",
+      "Parmesan",
+      "CheeseBurst",
+      "Emmental"
+    ],
+    "veggies": ["None", "onion", "capsicum", "mushroom", "tomato"],
+    "prices": [
+      {
+        "small": 200,
+        "medium": 350,
+        "large": 400
+      }
+    ],
+    "pizzaPrice": 255,
+    "cheesePrices": [
+      {
+        "None": 0,
+        "Mozzarella": 120,
+        "Cheddar": 150,
+        "Parmesan": 140,
+        "CheeseBurst": 155,
+        "Emmental": 120
+      }
+    ],
+    "veggiesPrices": [
+      {
+        "None": 0,
+        "onion": 40,
+        "capsicum": 30,
+        "mushroom": 45,
+        "tomato": 20
+      }
+    ],
+    "category": "nonveg",
+    "image": "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.jpg",
+    "description": "Pepper Barbecue Chicken I Cheese"
+  },
+  {
+    "id": 2,
+    "name": "Golden Corn Pizza",
+    "varients": ["small", "medium", "large"],
+    "base": [
+      "Whole Wheat",
+      "Refined Wheat",
+      "Italian Bread",
+      "Thin Crust",
+      "Cheese Crust"
+    ],
+    "cheese": [
+      "None",
+      "Mozzarella",
+      "Cheddar",
+      "Parmesan",
+      "CheeseBurst",
+      "Emmental"
+    ],
+    "veggies": ["None", "onion", "capsicum", "mushroom", "tomato"],
+    "prices": [
+      {
+        "small": 200,
+        "medium": 350,
+        "large": 400
+      }
+    ],
+    "pizzaPrice": 355,
+    "cheesePrices": [
+      {
+        "None": 0,
+        "Mozzarella": 120,
+        "Cheddar": 150,
+        "Parmesan": 140,
+        "CheeseBurst": 155,
+        "Emmental": 120
+      }
+    ],
+    "veggiesPrices": [
+      {
+        "None": 0,
+        "onion": 40,
+        "capsicum": 30,
+        "mushroom": 45,
+        "tomato": 20
+      }
+    ],
+
+    "category": "nonveg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6foYkrwpAO87yvGauFQzCE9O8xSi98pRWgZ0FN8SMdd3wYc0rSHad5RxZ5SI-Lh_28u0&usqp=CAU",
+    "description": "Pepper Barbecue Chicken I Cheese"
+  },
+  {
+    "id": 3,
+    "name": "Double Cheese Margherita Pizza",
+    "varients": ["small", "medium", "large"],
+    "base": [
+      "Whole Wheat",
+      "Refined Wheat",
+      "Italian Bread",
+      "Thin Crust",
+      "Cheese Crust"
+    ],
+    "cheese": [
+      "None",
+      "Mozzarella",
+      "Cheddar",
+      "Parmesan",
+      "CheeseBurst",
+      "Emmental"
+    ],
+    "veggies": ["None", "onion", "capsicum", "mushroom", "tomato"],
+    "prices": [
+      {
+        "small": 200,
+        "medium": 350,
+        "large": 400
+      }
+    ],
+    "pizzaPrice": 320,
+    "cheesePrices": [
+      {
+        "None": 0,
+        "Mozzarella": 120,
+        "Cheddar": 150,
+        "Parmesan": 140,
+        "CheeseBurst": 155,
+        "Emmental": 120
+      }
+    ],
+    "veggiesPrices": [
+      {
+        "None": 0,
+        "onion": 40,
+        "capsicum": 30,
+        "mushroom": 45,
+        "tomato": 20
+      }
+    ],
+
+    "category": "nonveg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_j1dPSto1BeL90inFnnD3QbaxV9qDgj_tXjj-aClRrJUaeH_LyvJ9VUI5LXstc0o4aR8&usqp=CAU",
+    "description": "Pepper Barbecue Chicken I Cheese"
+  },
+  {
+    "id": 4,
+    "name": "Jalapeno & Red Paprika Pizza",
+    "varients": ["small", "medium", "large"],
+    "base": [
+      "Whole Wheat",
+      "Refined Wheat",
+      "Italian Bread",
+      "Thin Crust",
+      "Cheese Crust"
+    ],
+    "cheese": [
+      "None",
+      "Mozzarella",
+      "Cheddar",
+      "Parmesan",
+      "CheeseBurst",
+      "Emmental"
+    ],
+    "veggies": ["None", "onion", "capsicum", "mushroom", "tomato"],
+    "prices": [
+      {
+        "small": 200,
+        "medium": 350,
+        "large": 400
+      }
+    ],
+    "pizzaPrice": 290,
+    "cheesePrices": [
+      {
+        "None": 0,
+        "Mozzarella": 120,
+        "Cheddar": 150,
+        "Parmesan": 140,
+        "CheeseBurst": 155,
+        "Emmental": 120
+      }
+    ],
+
+    "veggiesPrices": [
+      {
+        "None": 0,
+        "onion": 40,
+        "capsicum": 30,
+        "mushroom": 45,
+        "tomato": 20
+      }
+    ],
+
+    "category": "nonveg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2jHPhPJ9eAyu72WeTjf_88Z2NH5n4WAKTB1GbqriUgZHp4ncIhA_hksGUJ5Zq0kcF-Y0&usqp=CAU",
+    "description": "Pepper Barbecue Chicken I Cheese"
+  },
+  {
+    "id": 5,
+    "name": "Non Veg Supreme",
+    "varients": ["small", "medium", "large"],
+    "base": [
+      "Whole Wheat",
+      "Refined Wheat",
+      "Italian Bread",
+      "Thin Crust",
+      "Cheese Crust"
+    ],
+    "cheese": [
+      "None",
+      "Mozzarella",
+      "Cheddar",
+      "Parmesan",
+      "CheeseBurst",
+      "Emmental"
+    ],
+    "veggies": ["None", "onion", "capsicum", "mushroom", "tomato"],
+    "prices": [
+      {
+        "small": 200,
+        "medium": 350,
+        "large": 400
+      }
+    ],
+    "pizzaPrice": 450,
+    "cheesePrices": [
+      {
+        "None": 0,
+        "Mozzarella": 120,
+        "Cheddar": 150,
+        "Parmesan": 140,
+        "CheeseBurst": 155,
+        "Emmental": 120
+      }
+    ],
+    "veggiesPrices": [
+      {
+        "None": 0,
+        "onion": 40,
+        "capsicum": 30,
+        "mushroom": 45,
+        "tomato": 20
+      }
+    ],
+
+    "category": "nonveg",
+    "image": "https://www.kindpng.com/picc/m/106-1066049_mexican-pizza-png-pizza-top-view-png-transparent.png",
+    "description": "Pepper Barbecue Chicken I Cheese"
+  },
+  {
+    "id": 6,
+    "name": "Margerita",
+    "varients": ["small", "medium", "large"],
+    "base": [
+      "Whole Wheat",
+      "Refined Wheat",
+      "Italian Bread",
+      "Thin Crust",
+      "Cheese Crust"
+    ],
+    "cheese": [
+      "None",
+      "Mozzarella",
+      "Cheddar",
+      "Parmesan",
+      "CheeseBurst",
+      "Emmental"
+    ],
+    "veggies": ["None", "onion", "capsicum", "mushroom", "tomato"],
+    "prices": [
+      {
+        "small": 200,
+        "medium": 350,
+        "large": 400
+      }
+    ],
+    "pizzaPrice": 220,
+    "cheesePrices": [
+      {
+        "None": 0,
+        "Mozzarella": 120,
+        "Cheddar": 150,
+        "Parmesan": 140,
+        "CheeseBurst": 155,
+        "Emmental": 120
+      }
+    ],
+    "veggiesPrices": [
+      {
+        "None": 0,
+        "onion": 40,
+        "capsicum": 30,
+        "mushroom": 45,
+        "tomato": 20
+      }
+    ],
+    "category": "nonveg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFvQHIlUrHkXO5RPTdMBnQpAWrzO3dqrjTdhNxrLFGd21eFC327AoRb1QHj9NZ09YbZX0&usqp=CAU",
+    "description": "Pepper Barbecue Chicken I Cheese"
+  }
+]

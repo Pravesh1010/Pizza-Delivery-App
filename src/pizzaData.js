@@ -1,8 +1,11 @@
 const pizzas = [
   {
+    id: 1,
     name: "Pepper Barbecue Chicken",
     varients: ["small", "medium", "large"],
     base:["Whole Wheat", "Refined Wheat", "Italian Bread", "Thin Crust", "Cheese Crust"],
+    cheese: ["None", "Mozzarella", "Cheddar", "Parmesan", "CheeseBurst", "Emmental"],
+    veggies: ["None","onion", "capsicum", "mushroom", "tomato"],
     prices: [
       {
         small: 200,
@@ -10,22 +13,64 @@ const pizzas = [
         large: 400,
       },
     ],
-  
+    pizzaPrice: 255,
+    cheesePrices: [
+      {
+        None: 0,
+        Mozzarella: 120,
+        Cheddar: 150,
+        Parmesan: 140,
+        CheeseBurst: 155,
+        Emmental: 120,
+      },
+    ],
+    veggiesPrices: [
+      {
+        None: 0,
+        onion: 40,
+        capsicum: 30,
+        mushroom: 45,
+        tomato: 20,
+      }
+    ],
     category: "nonveg",
     image:
       "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.jpg",
     description: "Pepper Barbecue Chicken I Cheese",
   },
   {
+    id: 2,
     name: "Golden Corn Pizza",
     varients: ["small", "medium", "large"],
     base:["Whole Wheat", "Refined Wheat", "Italian Bread", "Thin Crust", "Cheese Crust"],
+    cheese: ["None","Mozzarella", "Cheddar", "Parmesan", "CheeseBurst", "Emmental"],
+    veggies: ["None","onion", "capsicum", "mushroom", "tomato"],
     prices: [
       {
         small: 200,
         medium: 350,
         large: 400,
       },
+    ],
+    pizzaPrice: 355,
+    cheesePrices: [
+      {
+        None: 0,
+        Mozzarella: 120,
+        Cheddar: 150,
+        Parmesan: 140,
+        CheeseBurst: 155,
+        Emmental: 120,
+      },
+    ],
+    veggiesPrices: [
+      {
+        None: 0, 
+        onion: 40,
+        capsicum: 30,
+        mushroom: 45,
+        tomato: 20,
+      }
     ],
 
     category: "nonveg",
@@ -34,9 +79,12 @@ const pizzas = [
     description: "Pepper Barbecue Chicken I Cheese",
   },
   {
+    id: 3,
     name: "Double Cheese Margherita Pizza",
     varients: ["small", "medium", "large"],
     base:["Whole Wheat", "Refined Wheat", "Italian Bread", "Thin Crust", "Cheese Crust"],
+    cheese: ["None","Mozzarella", "Cheddar", "Parmesan", "CheeseBurst", "Emmental"],
+    veggies: ["None","onion", "capsicum", "mushroom", "tomato"],
     prices: [
       {
         small: 200,
@@ -44,6 +92,27 @@ const pizzas = [
         large: 400,
       },
     ],
+    pizzaPrice: 320,
+    cheesePrices: [
+      {
+        None: 0,
+        Mozzarella: 120,
+        Cheddar: 150,
+        Parmesan: 140,
+        CheeseBurst: 155,
+        Emmental: 120,
+      },
+    ],
+    veggiesPrices: [
+      {
+        None: 0,
+        onion: 40,
+        capsicum: 30,
+        mushroom: 45,
+        tomato: 20,
+      }
+    ],
+
 
     category: "nonveg",
     image:
@@ -51,15 +120,39 @@ const pizzas = [
     description: "Pepper Barbecue Chicken I Cheese",
   },
   {
+    id: 4,
     name: "Jalapeno & Red Paprika Pizza",
     varients: ["small", "medium", "large"],
     base:["Whole Wheat", "Refined Wheat", "Italian Bread", "Thin Crust", "Cheese Crust"],
+    cheese: ["None","Mozzarella", "Cheddar", "Parmesan", "CheeseBurst", "Emmental"],
+    veggies: ["None","onion", "capsicum", "mushroom", "tomato"],
     prices: [
       {
         small: 200,
         medium: 350,
         large: 400,
       },
+    ],
+    pizzaPrice: 290,
+    cheesePrices: [
+      {
+        None: 0,
+        Mozzarella: 120,
+        Cheddar: 150,
+        Parmesan: 140,
+        CheeseBurst: 155,
+        Emmental: 120,
+      },
+    ],
+
+    veggiesPrices: [
+      {
+        None: 0,
+        onion: 40,
+        capsicum: 30,
+        mushroom: 45,
+        tomato: 20,
+      }
     ],
 
     category: "nonveg",
@@ -68,15 +161,38 @@ const pizzas = [
     description: "Pepper Barbecue Chicken I Cheese",
   },
   {
+    id: 5,
     name: "Non Veg Supreme",
     varients: ["small", "medium", "large"],
     base:["Whole Wheat", "Refined Wheat", "Italian Bread", "Thin Crust", "Cheese Crust"],
+    cheese: ["None","Mozzarella", "Cheddar", "Parmesan", "CheeseBurst", "Emmental"],
+    veggies: ["None","onion", "capsicum", "mushroom", "tomato"],
     prices: [
       {
         small: 200,
         medium: 350,
         large: 400,
       },
+    ],
+    pizzaPrice: 450,
+    cheesePrices: [
+      {
+        None: 0,
+        Mozzarella: 120,
+        Cheddar: 150,
+        Parmesan: 140,
+        CheeseBurst: 155,
+        Emmental: 120,
+      },
+    ],
+    veggiesPrices: [
+      {
+        None: 0,
+        onion: 40,
+        capsicum: 30,
+        mushroom: 45,
+        tomato: 20,
+      }
     ],
 
     category: "nonveg",
@@ -85,9 +201,12 @@ const pizzas = [
     description: "Pepper Barbecue Chicken I Cheese",
   },
   {
+    id: 6,
     name: "Margerita",
     varients: ["small", "medium", "large"],
     base:["Whole Wheat", "Refined Wheat", "Italian Bread", "Thin Crust", "Cheese Crust"],
+    cheese: ["None","Mozzarella", "Cheddar", "Parmesan", "CheeseBurst", "Emmental"],
+    veggies: ["None","onion", "capsicum", "mushroom", "tomato"],
     prices: [
       {
         small: 200,
@@ -95,7 +214,26 @@ const pizzas = [
         large: 400,
       },
     ],
-
+    pizzaPrice: 220,
+    cheesePrices: [
+      {
+        None: 0,
+        Mozzarella: 120,
+        Cheddar: 150,
+        Parmesan: 140,
+        CheeseBurst: 155,
+        Emmental: 120,
+      },
+    ],
+    veggiesPrices: [
+      {
+        None: 0,
+        onion: 40,
+        capsicum: 30,
+        mushroom: 45,
+        tomato: 20,
+      }
+    ],
     category: "nonveg",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFvQHIlUrHkXO5RPTdMBnQpAWrzO3dqrjTdhNxrLFGd21eFC327AoRb1QHj9NZ09YbZX0&usqp=CAU",

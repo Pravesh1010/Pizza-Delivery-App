@@ -16,7 +16,9 @@ body{
 }
 .flex-container{
   display: flex;
-  font-size: 20px;
+  font-size: 15px;
+  justify-content: space-evenly;
+  padding: 5px;
 }
 
 .price{
@@ -29,4 +31,8 @@ body{
 
 .nav-container{
   background-color: rgb(114, 114, 94);
+}
+
+.item-card{
+  border: 1px solid black;
 }
