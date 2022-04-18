@@ -36,3 +36,8 @@ body{
 .item-card{
   border: 1px solid black;
 }
+
+.sub-total{
+  margin-left: 700px;
+  margin-top: 300px;
+}

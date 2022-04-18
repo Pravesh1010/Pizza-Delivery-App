@@ -1,29 +1,28 @@
-import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 
-export function UserLogin() {
-  const history = useHistory();
 
-  const [login, setLogin] = useState([]);
+export function UserLogin({handleLogin, user, password, setUser, setPassword}) {
+  // const history = useHistory();
 
-  useEffect(() => {
-    fetch("http://localhost:5000/users")
-      .then((data) => data.json())
-      .then((log) => setLogin(log));
-  }, []);
+  // const [login, setLogin] = useState([]);
 
-  const handleLogin = () => {
-    login.map((userDetails) => {
-      if(userDetails.username === user && userDetails.password === password){
-        history.push('/');
-        console.log("Welcome");
-      }
-    })
-    // console.log(login);
-  }
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/users")
+  //     .then((data) => data.json())
+  //     .then((log) => setLogin(log));
+  // }, []);
 
-  const [user, setUser] = useState(null);
-  const [password, setPassword] = useState(null);
+  // const handleLogin = () => {
+  //   login.map((userDetails) => {
+  //     if(userDetails.username === user && userDetails.password === password){
+  //       history.push('/');
+  //       console.log(userDetails.username);
+  //     }
+  //   })
+  //   // console.log(login);
+  // }
+
+  // const [user, setUser] = useState(null);
+  // const [password, setPassword] = useState(null);
   return (
     <div className="w-50 p-3">
       <form>

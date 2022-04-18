@@ -1,7 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import 'bootstrap';
 
-export default function NavBar({ cartItems }) {
+export default function NavBar({ cartItems, userName }) {
   const history = useHistory();
   return (
     <div className="nav-container">
@@ -22,13 +23,45 @@ export default function NavBar({ cartItems }) {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <button className="btn btn-dark" onClick={() => history.push('/login')}>
-                Login 
+            {/* <li className="nav-item">
+              <button
+                className="btn btn-dark"
+                onClick={() => history.push("/login")}
+              >
+                {userName}
               </button>
+            </li> */}
+            <li className="nav-item">
+              <div class="dropdown">
+                <button
+                  class="btn btn-dark dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  onClick={() => history.push("/login")}
+                >
+                  {userName}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">
+                    Orders
+                  </a>
+                  <a class="dropdown-item" href="/login">
+                    Logout
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </div>
+              </div>
             </li>
             <li className="nav-item">
-              <button className="btn btn-dark" onClick={() => history.push('/cart')}>
+              <button
+                className="btn btn-dark"
+                onClick={() => history.push("/cart")}
+              >
                 Cart {cartItems.length}
               </button>
             </li>
@@ -38,6 +71,3 @@ export default function NavBar({ cartItems }) {
     </div>
   );
 }
-
-
-
