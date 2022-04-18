@@ -1,12 +1,20 @@
 import React, { useState } from "react";
+import { Payment } from "../Payment";
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems, subTotal }) => {
   // const [total, setTotal]  = useState(0);
-  let total = 0;
+  // const [subTotal, setSubTotal] = useState(0);
   console.log(cartItems);
   if (cartItems.length == 0){
     return <h1>Your Cart is Empty</h1>
   }
+  // let total = 0
+  // const handleCheckOut = () => {
+  //   cartItems.map((totalAmount) => {
+  //     let total = parseInt(subTotal) + parseInt(totalAmount.totalPrice);
+  //   })
+  //   setSubTotal(total)
+  // }
   return (
     <div>
       <div className="row">
@@ -26,13 +34,13 @@ const Cart = ({ cartItems }) => {
             </div>
           );
         })}
+      <h3 className="text-success sub-total">SubTotal: $ {subTotal}</h3>
+        <Payment subTotal={subTotal}/>
+        {/* {cartItems.map((items) => {
+          total = parseInt(subTotal) + parseInt(items.totalPrice);
+          return <div>{setSubTotal(total)}</div>;
+        })} */}
       </div>
-      {/* <div>
-        {cartItems.map((items) => {
-          total = parseInt(total) + parseInt(items.totalPrice);
-          return <div>{total}</div>;
-        })}
-      </div> */}
     </div>
   );
 };
