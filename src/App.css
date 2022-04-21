@@ -25,6 +25,16 @@ body{
   font-size: 20px;
 }
 
+.invalid{
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.navbar-collapse{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .name{
   font-size: 30px;
 }
@@ -40,4 +50,14 @@ body{
 .sub-total{
   margin-left: 700px;
   margin-top: 300px;
+}
+.signup{
+  padding: 10px;  
+  width:400px;
+  margin-left: 500px;
+  background-color:rgb(197, 192, 185);
+  border-radius: 10px;
+}
+.signInDetails{
+  padding: 20px;
 }

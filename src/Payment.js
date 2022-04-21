@@ -11,9 +11,10 @@ export function Payment({subTotal}) {
             headers: { 
                 "content-type" : "application/json",
             }
-        }).then(setPayInfo("Your Order is Placed"));
-        
+        }).then(setPayInfo("Your Order is Placed"))
+        .then(console.log(token))      
     }
+    
   return (
     <div>
         <StripeCheckOut

@@ -34,7 +34,7 @@ const Cart = ({ cartItems, subTotal }) => {
             </div>
           );
         })}
-      <h3 className="text-success sub-total">SubTotal: $ {subTotal}</h3>
+      {/* <h3 className="text-success sub-total">SubTotal: $ {subTotal}</h3> */}
         <Payment subTotal={subTotal}/>
         {/* {cartItems.map((items) => {
           total = parseInt(subTotal) + parseInt(items.totalPrice);
