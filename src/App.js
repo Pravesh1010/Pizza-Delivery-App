@@ -7,7 +7,12 @@ import { SignUp, UserLogin } from "./screens/UserLogin";
 import { CartProvider } from "react-use-cart";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import Admin, { AddPizzas, OrdersList, PizzaList, UsersList } from "./screens/Admin";
+import Admin, {
+  AddPizzas,
+  OrdersList,
+  PizzaList,
+  UsersList,
+} from "./screens/Admin";
 const API = "https://praveshms.herokuapp.com";
 
 function App() {
@@ -23,17 +28,16 @@ function App() {
   const [subTotal, setSubTotal] = useState(0);
 
   const handleClick = (pizza, total, quantity, addOns) => {
-    if(userName == "Login"){
-      return alert("login to order")
+    if (userName == "Login") {
+      return alert("login to order");
     }
     pizza.totalPrice = `${total}`;
     pizza.quantity = `${quantity}`;
     pizza.addOns = `${addOns}`;
-    pizza.userName = `${userName}`
+    pizza.userName = `${userName}`;
     setCartItems([...cartItems, pizza]);
     setSubTotal(total + subTotal);
   };
-  
 
   const [login, setLogin] = useState([]);
 
@@ -51,7 +55,7 @@ function App() {
       if (userDetails.username === user && userDetails.password === password) {
         history.push("/");
         setUserName(userDetails.username);
-        setUserId(userDetails._id)
+        setUserId(userDetails._id);
       } else {
         setMsg("Invalid Credentials");
       }
@@ -81,19 +85,23 @@ function App() {
       </Switch>
       <Switch>
         <Route exact path="/login">
-          {msg ? (
-            <SignUp />
-          ) : (
-            <UserLogin
-              login={login}
-              handleLogin={handleLogin}
-              msg={msg}
-              user={user}
-              password={password}
-              setUser={setUser}
-              setPassword={setPassword}
-            />
-          )}
+          <div className="userAndAdmin">
+            {msg ? (
+              <SignUp />
+            ) : (
+              <UserLogin
+                login={login}
+                handleLogin={handleLogin}
+                msg={msg}
+                user={user}
+                password={password}
+                setUser={setUser}
+                setPassword={setPassword}
+              />
+            )}
+
+            <AdminLogin />
+          </div>
         </Route>
         <Route exact path="/admin">
           <Admin pizzas={pizzas} login={login} />
@@ -102,7 +110,7 @@ function App() {
           <UsersList login={login} />
         </Route>
         <Route exact path="/admin/pizzalist">
-            <PizzaList pizzas={pizzas} cartItems={cartItems}/>
+          <PizzaList pizzas={pizzas} cartItems={cartItems} />
         </Route>
         <Route exact path="/admin/addpizza">
           <AddPizzas />
@@ -111,6 +119,71 @@ function App() {
           <OrdersList />
         </Route>
       </Switch>
+    </div>
+  );
+}
+
+export function AdminLogin() {
+  const adminCredentails = {
+    email: "praveshmsp@gmail.com",
+    password: "praveshadmin",
+  };
+
+  const history = useHistory();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [invalid, setInvalid] = useState("");
+  const handleClick = () => {
+    if (
+      adminCredentails.email === email &&
+      adminCredentails.password === password
+    ) {
+      history.push("/admin");
+    } else {
+      setInvalid("Invalid Credentials");
+    }
+  };
+
+  return (
+    <div className="w-50 p-3 signup">
+      <form className="signInDetails">
+        <h1 className="text-white">Admin Login</h1>
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label text-white">
+            Username
+          </label>
+          <div class="col-sm-10">
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail3"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label
+            for="inputPassword3"
+            class="col-sm-2 col-form-label text-white"
+          >
+            Password
+          </label>
+          <div class="col-sm-10">
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword3"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+        </div>
+      </form>
+      <button type="submit" class="btn btn-white" onClick={handleClick}>
+        Login
+      </button>
+      <h1>{invalid}</h1>
     </div>
   );
 }
