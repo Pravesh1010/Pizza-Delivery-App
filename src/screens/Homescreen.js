@@ -7,6 +7,7 @@ export default function Homescreen({
   handleClick,
   pizzas,
 }) {
+  
   // const [pizzas, setPizzas] = useState([]);
 
   // useEffect(() => {
@@ -22,6 +23,7 @@ export default function Homescreen({
   //   console.log(item);
   //   console.log(cart);
   // }
+
   return (
     <div>
       <div className="row">

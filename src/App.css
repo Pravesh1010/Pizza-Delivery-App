@@ -40,7 +40,7 @@ body{
 }
 
 .nav-container{
-  background-color: rgb(114, 114, 94);
+  background-color: #EE3A43;
 }
 
 .item-card{
@@ -55,9 +55,17 @@ body{
   padding: 10px;  
   width:400px;
   margin-left: 500px;
-  background-color:rgb(197, 192, 185);
+  background-color:#EE3A43;
   border-radius: 10px;
 }
 .signInDetails{
   padding: 20px;
+}
+
+
+
+.admin-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
 }

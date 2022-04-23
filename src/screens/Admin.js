@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
 
 export default function Admin({ pizzas, login }) {
@@ -51,7 +51,7 @@ export default function Admin({ pizzas, login }) {
               </button>
             </li>
             <li class="nav-item">
-              <button class="btn btn-outline-dark" href="#">
+              <button class="btn btn-outline-dark" onClick={() => history.push("/admin/orders")}>
                 Orders
               </button>
             </li>
@@ -67,16 +67,62 @@ export default function Admin({ pizzas, login }) {
   );
 }
 
-export function PizzaList({ pizzas }) {
+export function OrdersList(){
+
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/orders/pizza")
+      .then((data) => data.json())
+      .then((order) => setOrders(order));
+  }, []);
+
+
+  return(
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Order Id</th>
+            <th scope="col">Email</th>
+            <th scope="col">User Name</th>
+            <th scope="col">User ID</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          {orders.map((order, index) => {
+            return (
+              <tr className="text-secondary">
+                <td>{index+1}.</td>
+                <td>{order.id}</td>
+                <td>{order.email}</td>
+                <td>{order.userName}</td>
+                <td>{order.userId}</td>
+                <td>$ {order.amount}/-</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+export function PizzaList({ pizzas, cartItems }) {
+  console.log(cartItems)
   return (
     <div>
       <table class="table">
         <thead>
           <tr>
             <th scope="col">Id</th>
+            <th scope="col">image</th>
             <th scope="col">Pizzas</th>
             <th scope="col">Price</th>
             <th scope="col">Category</th>
+            <th scope="col">Availablility</th>
           </tr>
         </thead>
         <tbody>
@@ -84,9 +130,11 @@ export function PizzaList({ pizzas }) {
             return (
               <tr className="text-secondary">
                 <td>{index + 1}</td>
+                <td><img src={pizza.image} className="admin-image"></img></td>
                 <td>{pizza.name}</td>
                 <td>Rs {pizza.pizzaPrice}/-</td>
                 <td>{pizza.category}</td>
+                <td>{pizza.available}</td>
               </tr>
             );
           })}
@@ -169,6 +217,7 @@ export function AddPizzas() {
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
+  const [available, setAvailable] = useState("");
 
   return (
     <div>
@@ -230,10 +279,21 @@ export function AddPizzas() {
           <input
             type="text"
             class="form-control"
-            id="inputPassword3"
             placeholder="Add description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Available quantity</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="No of Availablility"
+            value={available}
+            onChange={(e) => setAvailable(e.target.value)}
           />
         </div>
       </div>
@@ -251,6 +311,7 @@ export function AddPizzas() {
             category: category,
             image: image,
             description: description,
+            available: available,
           };
           fetch("http://localhost:5000/pizzas", {
             method: "POST",

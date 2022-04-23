@@ -7,7 +7,7 @@ import { SignUp, UserLogin } from "./screens/UserLogin";
 import { CartProvider } from "react-use-cart";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import Admin, { AddPizzas, PizzaList, UsersList } from "./screens/Admin";
+import Admin, { AddPizzas, OrdersList, PizzaList, UsersList } from "./screens/Admin";
 const API = "https://praveshms.herokuapp.com";
 
 function App() {
@@ -23,12 +23,17 @@ function App() {
   const [subTotal, setSubTotal] = useState(0);
 
   const handleClick = (pizza, total, quantity, addOns) => {
+    if(userName == "Login"){
+      return alert("login to order")
+    }
     pizza.totalPrice = `${total}`;
     pizza.quantity = `${quantity}`;
     pizza.addOns = `${addOns}`;
+    pizza.userName = `${userName}`
     setCartItems([...cartItems, pizza]);
     setSubTotal(total + subTotal);
   };
+  
 
   const [login, setLogin] = useState([]);
 
@@ -39,12 +44,14 @@ function App() {
   }, []);
 
   const [userName, setUserName] = useState("Login");
+  const [userId, setUserId] = useState("");
   const [msg, setMsg] = useState("");
   const handleLogin = () => {
     login.map((userDetails) => {
       if (userDetails.username === user && userDetails.password === password) {
         history.push("/");
         setUserName(userDetails.username);
+        setUserId(userDetails._id)
       } else {
         setMsg("Invalid Credentials");
       }
@@ -67,6 +74,8 @@ function App() {
             cartItems={cartItems}
             setCartItems={setCartItems}
             subTotal={subTotal}
+            userName={userName}
+            userId={userId}
           />
         </Route>
       </Switch>
@@ -93,10 +102,13 @@ function App() {
           <UsersList login={login} />
         </Route>
         <Route exact path="/admin/pizzalist">
-            <PizzaList pizzas={pizzas} />
+            <PizzaList pizzas={pizzas} cartItems={cartItems}/>
         </Route>
         <Route exact path="/admin/addpizza">
           <AddPizzas />
+        </Route>
+        <Route exact path="/admin/orders">
+          <OrdersList />
         </Route>
       </Switch>
     </div>

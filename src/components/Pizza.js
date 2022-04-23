@@ -74,7 +74,7 @@ export default function Pizza({ pizza, name, image, pizzas, handleClick, descrip
         </div>
         <div className="m-1 w-100" key={pizza.id}>
           <button
-            className="btn btn-dark btn-sm"
+            className="btn btn-success btn-sm"
             onClick={() => handleClick(pizza, totalPrice, quantity, addOns)}
           >
             ADD TO CART

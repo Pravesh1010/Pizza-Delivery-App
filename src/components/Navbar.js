@@ -1,15 +1,19 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import 'bootstrap';
+import "bootstrap";
 
 export default function NavBar({ cartItems, userName }) {
   const history = useHistory();
   return (
     <div className="nav-container">
       <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
-        <a className="navbar-brand" onClick={() => history.push("/")}>
-          World of Pizza
-        </a>
+        <h1
+          className="navbar-brand text-white font-italic"
+          onClick={() => history.push("/")}
+        >
+          Slice of heaven
+        </h1>
+        <img src="https://media.istockphoto.com/vectors/funny-pizza-sign-in-retro-style-vector-id1128704035?k=20&m=1128704035&s=612x612&w=0&h=YW0qO0qnxortvu2PJNrop0AFJ1q_26FVMaYnSB553oc=" className="admin-image"></img>
         <button
           className="navbar-toggler"
           type="button"
@@ -34,7 +38,7 @@ export default function NavBar({ cartItems, userName }) {
             <li className="nav-item">
               <div class="dropdown">
                 <button
-                  class="btn btn-dark dropdown-toggle"
+                  class="btn btn-white dropdown-toggle"
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
@@ -59,7 +63,7 @@ export default function NavBar({ cartItems, userName }) {
             </li>
             <li className="nav-item">
               <button
-                className="btn btn-dark"
+                className="btn btn-white"
                 onClick={() => history.push("/cart")}
               >
                 Cart {cartItems.length}

@@ -14,9 +14,9 @@ export function UserLogin({
   return (
     <div className="w-50 p-3 signup">
       <form className="signInDetails">
-        <h1>User Login</h1>
+        <h1 className="text-white">User Login</h1>
         <div class="row mb-3">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">
+          <label for="inputEmail3" class="col-sm-2 col-form-label text-white">
             Email
           </label>
           <div class="col-sm-10">
@@ -29,7 +29,7 @@ export function UserLogin({
           </div>
         </div>
         <div class="row mb-3">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">
+          <label for="inputPassword3" class="col-sm-2 col-form-label text-white">
             Password
           </label>
           <div class="col-sm-10">
@@ -42,7 +42,7 @@ export function UserLogin({
           </div>
         </div>
       </form>
-      <button type="submit" class="btn btn-primary" onClick={handleLogin}>
+      <button type="submit" class="btn btn-white" onClick={handleLogin}>
         Login
       </button>
 
@@ -65,11 +65,11 @@ export function SignUp() {
 
   return (
     <div className="signup">
-      <h3 className="text-secondary">Register and then login</h3>
+      <h3 className="text-white">Register and then login</h3>
       <form className="signInDetails">
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputEmail4">User Name</label>
+            <label for="inputEmail4" className="text-white">User Name</label>
             <input
               type="text"
               class="form-control"
@@ -78,7 +78,7 @@ export function SignUp() {
             />
           </div>
           <div class="form-group col-md-6">
-            <label for="inputEmail4">Password</label>
+            <label for="inputEmail4" className="text-white">Password</label>
             <input
               type="password"
               class="form-control"
@@ -87,7 +87,7 @@ export function SignUp() {
             />
           </div>
           <div class="form-group">
-            <label for="inputPassword4">Email</label>
+            <label for="inputPassword4" className="text-white">Email</label>
             <input
               type="Email"
               class="form-control"
@@ -97,7 +97,7 @@ export function SignUp() {
           </div>
         </div>
         <div class="form-group">
-          <label for="inputAddress">Address</label>
+          <label for="inputAddress" className="text-white">Address</label>
           <input
             type="text"
             class="form-control"
@@ -108,7 +108,7 @@ export function SignUp() {
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
+            <label for="inputCity" className="text-white">City</label>
             <input
               type="text"
               class="form-control"
@@ -119,7 +119,7 @@ export function SignUp() {
         </div>
       </form>
       <button
-        class="btn btn-primary"
+        class="btn btn-white"
         onClick={() => {
           const newUser = {
             username: user,
@@ -142,8 +142,8 @@ export function SignUp() {
       >
         Sign in
       </button>
-      <button className="btn btn-primary" onClick={() => history.push("/login")}>Login</button>
-      {signUpMsg ? <h3 className="text-dark invalid">{signUpMsg} !!</h3> : ""}
+      <button className="btn btn-white" onClick={() => history.push("/login")}>Login</button>
+      {signUpMsg ? <h3 className="text-white invalid">{signUpMsg} !!</h3> : ""}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Payment } from "../Payment";
 
-const Cart = ({ cartItems, subTotal }) => {
+const Cart = ({ cartItems, subTotal,userName, userId }) => {
   // const [total, setTotal]  = useState(0);
   // const [subTotal, setSubTotal] = useState(0);
   console.log(cartItems);
@@ -35,7 +35,7 @@ const Cart = ({ cartItems, subTotal }) => {
           );
         })}
       {/* <h3 className="text-success sub-total">SubTotal: $ {subTotal}</h3> */}
-        <Payment subTotal={subTotal}/>
+        <Payment subTotal={subTotal} cartItems={cartItems} userName={userName} userId={userId}/>
         {/* {cartItems.map((items) => {
           total = parseInt(subTotal) + parseInt(items.totalPrice);
           return <div>{setSubTotal(total)}</div>;
