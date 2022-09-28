@@ -1,8 +1,11 @@
 .App {
   text-align: center;
+
 }
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
-
+.pizza-cards{
+  background-image: #e2d1c3;
+}
 body{
   font-family: 'Lilita One', cursive;
 }
@@ -41,6 +44,8 @@ body{
 
 .nav-container{
   background-color: #EE3A43;
+  background-image: linear-gradient(to right, #870000, #190a05);
+
 }
 
 .item-card{
@@ -55,14 +60,13 @@ body{
   padding: 10px;  
   width:400px;
   margin-left: 500px;
-  background-color: black;
+  background-color: rgb(58, 53, 53);
+  background-image: linear-gradient(to left, #DECBA4, #3E5151);
   border-radius: 10px;
 }
 .signInDetails{
   padding: 20px;
 }
-
-
 
 .admin-image{
   width: 50px;

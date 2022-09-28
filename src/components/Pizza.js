@@ -16,7 +16,7 @@ export default function Pizza({ pizza, name, image, pizzas, handleClick, descrip
   const totalPrice = (parseInt(addOns) + parseInt(pizza.pizzaPrice)) * quantity;
 
   return (
-    <div className="shadow-lg p-3 mb-5 bg-white rounded border-left border-dark border-5">
+    <div className="shadow-lg p-3 mb-5 bg-white rounded border-left border-dark border-5 pizza-cards">
       <h1 className="name">{name}</h1>
       <img
         src={image}

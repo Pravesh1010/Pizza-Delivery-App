@@ -45,8 +45,10 @@ export function UserLogin({
       <button type="submit" class="btn btn-white" onClick={handleLogin}>
         Login
       </button>
+      <p className="text-white">New User?</p>
+      <button className="btn btn-outlined" onClick={() => history.push("/signup")}>Sign up</button>
 
-      {msg ? <SignUp /> : <h3 className="text-dark invalid">{msg}</h3>}
+      {/* {msg ? <SignUp /> : <h3 className="text-dark invalid">{msg}</h3>} */}
       {/* {msg ? <button className="text-primary" onClick={() => history.push("/signup")}>Register</button> : <h3 className="text-dark invalid">{msg}</h3>} */}
     </div>
   );

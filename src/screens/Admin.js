@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
 
+const API = "https://praveshms.herokuapp.com";
 export default function Admin({ pizzas, login }) {
   const history = useHistory();
 
@@ -8,7 +9,7 @@ export default function Admin({ pizzas, login }) {
 
   const styles = {
     display: "block",
-  };
+  }; 
   return (
     <div>
       <h1>Admin panel</h1>
@@ -72,7 +73,7 @@ export function OrdersList(){
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/orders/pizza")
+    fetch(`${API}/orders/pizza`)
       .then((data) => data.json())
       .then((order) => setOrders(order));
   }, []);
@@ -313,7 +314,7 @@ export function AddPizzas() {
             description: description,
             available: available,
           };
-          fetch("http://localhost:5000/pizzas", {
+          fetch(`${API}/pizzas`, {
             method: "POST",
             body: JSON.stringify(nPizza),
             headers: {
